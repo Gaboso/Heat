@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /heat-service
+
+spring:
+  datasource:
+    tomcat:
+      min-idle: 1
+      max-idle: 20
+      max-active: 20
+      test-while-idle: true
+      test-on-borrow: true
+      initial-size: 1
+      remove-abandoned: true
+      remove-abandoned-timeout: 1800
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/heat-db
+    username: postgres
+
+info:
+  app:
+    name: '@project.artifactId@'
+    description: '@project.description@'
+  build:
+    groupId: '@project.groupId@'
+    artifact: '@project.artifactId@'
+    name: '@project.name@'
+    version: '@project.version@'
+    encoding: '@project.build.sourceEncoding@'
