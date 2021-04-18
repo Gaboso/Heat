@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:9.6
+    container_name: "heat_postgres"
+    environment:
+      - POSTGRES_DB=heat-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+
+  sonarqube:
+    image: sonarqube:latest
+    container_name: 'heat_sonar'
+    ports:
+      - "9000:9000"
+      - "9092:9092"
