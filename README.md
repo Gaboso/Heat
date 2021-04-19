@@ -41,4 +41,13 @@ cd service && mvnw spring-boot:run
 cd web && yarn start
 ```
 
+**4° step** - [Download _NGINX_](http://nginx.org/en/download.html) or use an existing on your machine, copy `dev/nginx/nginx.conf` to `conf` folder inside _nginx_.
+
+**5° step** - Start _nginx_
+
+**6° step** - Access application [here](http://localhost)
+
+
+----
+
 Made with :heart: by Gaboso™ 2021
