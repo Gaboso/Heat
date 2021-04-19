@@ -1,22 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import Form from './components/Form';
+import MapView from './components/MapView';
 
 function App() {
+
+  const [formOpen, setFormOpen] = useState(false);
+
+  const openForm = () => {
+    setFormOpen(true);
+  };
+
+  const closeForm = (e) => {
+    e.stopPropagation();
+    setFormOpen(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <Form open={formOpen} handleClose={closeForm}/>
+
+      <MapView/>
+
+      <Fab color="primary" aria-label="add" onClick={openForm}>
+        <AddIcon/>
+      </Fab>
     </div>
   );
 }
