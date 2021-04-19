@@ -17,3 +17,12 @@ services:
     ports:
       - "9000:9000"
       - "9092:9092"
+
+  nginx:
+    image: nginx:latest
+    container_name: 'heat_nginx'
+    ports:
+    - "80:80"
+    build:
+      context: ./web/.nginx
+      dockerfile: Dockerfile.nginx
