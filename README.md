@@ -2,17 +2,19 @@
 
 A heat map project with React and Spring Boot
 
+![screenshot](.github/media/screenshot.png)
+
 
 #### Requirements :earth_americas:
 
 | Requirement   | Use |
-| :------------ | -------------- |
+| ------------- | -------------- |
 | Node 12.x     | React |
 | Yarn          | Build react-heat |
 | Java 8.x      | Build and run heat-service |
-| Docker        | Run DB and sonarQube |
+| Docker        | Run PostgreSQL |
 
-#### Structure
+#### Folder Structure
 
 ```
 - Heat
@@ -21,10 +23,9 @@ A heat map project with React and Spring Boot
     - web      ## Front-end React 
 ```
 
-#### How to run :runner:
+### How to run :runner:
 
-**1° step** - Start Docker :whale:
-> image with `postgres` and `sonarqube`
+**1° step** - Start Docker image with `postgres` :whale:
 
 ```bash
 docker-compose -f docker-compose.yml up -d
@@ -42,12 +43,26 @@ cd service && mvnw spring-boot:run
 cd web && yarn start
 ```
 
-**4° step** - [Download _NGINX_](http://nginx.org/en/download.html) or use an existing on your machine, copy `dev/nginx/nginx.conf` to `conf` folder inside _nginx_.
+**4° step** - [Download _NGINX_](http://nginx.org/en/download.html) or use an existing on your machine, copy the `dev/nginx/nginx.conf` file to `conf` folder inside _nginx_ and then start _nginx_.
 
-**5° step** - Start _nginx_
+**5° step** - Access application [here](http://localhost)
 
-**6° step** - Access application [here](http://localhost)
+### Extra
 
+In the `dev` folder there is a sql file with 90 residences.
+
+Run it, to visualize the map with several residences
+
+### To do
+
+- [ ] Tests to React
+- [ ] Tests to Spring Java
+- [ ] Fix form layout
+- [ ] Fix home layout
+- [ ] Sonarqube integration to see (coverage, bugs and vulnerabilities)
+- [ ] Move nginx to docker
+- [ ] Github actions to React
+- [ ] Github actions to Spring
 
 ----
 
