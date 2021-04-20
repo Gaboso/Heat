@@ -12,8 +12,7 @@ function App() {
     setFormOpen(true);
   };
 
-  const closeForm = (e) => {
-    e.stopPropagation();
+  const closeForm = () => {
     setFormOpen(false);
   };
 
