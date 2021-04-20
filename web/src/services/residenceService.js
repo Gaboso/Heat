@@ -1,8 +1,8 @@
 import api from './api';
 
 export default {
-  getResidenceById: ({ residenceId }) =>
-    api.get(`/residence/${residenceId}`),
+  getAllResidences: () =>
+    api.get(`/residence/`),
   saveResidence: ({ payload }) =>
     api.post(`/residence`, payload)
 };

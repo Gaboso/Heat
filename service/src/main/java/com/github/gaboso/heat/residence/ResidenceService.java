@@ -19,8 +19,8 @@ public class ResidenceService {
         return residenceRepository.findById(id).orElse(new Residence());
     }
 
-    public List<Residence> findAll() {
-        return residenceRepository.findAll();
+    public List<ResidenceDTO> findAll() {
+        return residenceRepository.findAllResidence();
     }
 
     public Residence save(Residence residence) {

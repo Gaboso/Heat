@@ -16,6 +16,7 @@ A heat map project with React and Spring Boot
 
 ```
 - Heat
+    - dev      ## Config to run in dev mode
     - service  ## Back-end Java/Spring
     - web      ## Front-end React 
 ```

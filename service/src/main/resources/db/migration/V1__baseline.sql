@@ -14,3 +14,6 @@ CREATE TABLE IF NOT EXISTS heat.tb_residence
 );
 
 ALTER TABLE heat.tb_residence OWNER TO postgres;
+
+CREATE SEQUENCE IF NOT EXISTS heat.tb_residence_id_seq START 1;
+SELECT setval('heat.tb_residence_id_seq', (SELECT max(id) FROM heat.tb_residence));
