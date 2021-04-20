@@ -1,23 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import {toast, ToastContainer} from 'react-toastify';
+
+import {variables} from '../Theme';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 const Toast = styled(ToastContainer)`
   .Toastify__toast--info {
-    background: #13B4F9;
+    background: ${variables.clrSupport};
   }
 
   .Toastify__toast--success {
-    background: #8FD114;
+    background: ${variables.clrSuccess};
   }
 
   .Toastify__toast--warning {
-    background: #FFB144;
+    background: ${variables.clrWarning};
   }
 
   .Toastify__toast--error {
-    background: #FF3D32;
+    background: ${variables.clrError};
   }
 `;
 
