@@ -14,9 +14,4 @@ public class ExceptionInfo {
         this.message = message;
     }
 
-    public ExceptionInfo(String message, String error) {
-        this.message = message;
-        this.error = error;
-    }
-
 }
