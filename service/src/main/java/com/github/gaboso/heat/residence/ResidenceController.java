@@ -27,7 +27,7 @@ public class ResidenceController {
     }
 
     @GetMapping
-    public List<Residence> findAll() {
+    public List<ResidenceDTO> findAll() {
         return service.findAll();
     }
 
