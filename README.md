@@ -64,8 +64,8 @@ Run it, to visualize the map with several residences
 - [x] Fix home layout
 - [ ] Sonarqube integration to see (coverage, bugs and vulnerabilities)
 - [ ] Move nginx to docker
-- [ ] Github actions to React
-- [ ] Github actions to Spring
+- [x] Github actions to React
+- [x] Github actions to Spring
 
 ----
 
