@@ -2,9 +2,9 @@ name: Maven Java CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, dev_add_actions ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, dev_add_actions ]
 
 env:
   MAVEN_CLI_OPTS: "--batch-mode"
