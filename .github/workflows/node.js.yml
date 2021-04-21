@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main, dev_add_actions ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, dev_add_actions ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -23,6 +23,3 @@ jobs:
 
       - name: Install dependencies
         run: cd web && yarn --frozen-lockfile
-
-      - name: Running tests
-        run: cd web && yarn test
