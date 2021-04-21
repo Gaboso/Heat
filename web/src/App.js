@@ -1,12 +1,14 @@
+import styled from 'styled-components';
 import Home from './pages/Home';
 
-function App() {
+const Container = styled.div`
+  margin: 8px;
+`;
 
-  return (
-    <div className="App">
-      <Home/>
-    </div>
-  );
-}
+const App = () => (
+  <Container>
+    <Home/>
+  </Container>
+)
 
 export default App;

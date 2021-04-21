@@ -1,5 +1,8 @@
 --  I left the ids fixed, because I had a problem with the sequence and I didn't have time to fix it
 
+-- I chose the Netherlands to place the residences, because it is a small country
+-- and therefore makes it easier to visualize the data on the heat map
+
 insert into heat.tb_residence values(10000, '2223 BT', 26, 52.166821, 4.391392, 3);
 insert into heat.tb_residence values(10001, '7141 KL', 11, 52.027125, 6.627009, 4);
 insert into heat.tb_residence values(10002, '3812 GA', 32, 52.06024, 5.348779, 8);

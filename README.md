@@ -11,7 +11,8 @@ A heat map project with React and Spring Boot
 | ------------- | -------------- |
 | Node 12.x     | React |
 | Yarn          | Build react-heat |
-| Java 8.x      | Build and run heat-service |
+| Maven 3.6.x   | Build heat-service |
+| Java 8.x      | Run heat-service |
 | Docker        | Run PostgreSQL |
 
 #### Folder Structure
@@ -34,18 +35,20 @@ docker-compose -f docker-compose.yml up -d
 **2° step** - Start heat-service :computer:
 
 ```bash
-cd service && mvnw spring-boot:run
+cd service && mvn clean install && mvnw spring-boot:run
 ```
 
 **3° step** - Start react-heat :globe_with_meridians:
 
+> Add your Google Maps key in `web\.env` param name `REACT_APP_MAPS_API_KEY`
+
 ```bash
-cd web && yarn start
+cd web && yarn && yarn start
 ```
 
 **4° step** - [Download _NGINX_](http://nginx.org/en/download.html) or use an existing on your machine, copy the `dev/nginx/nginx.conf` file to `conf` folder inside _nginx_ and then start _nginx_.
 
-**5° step** - Access application [here](http://localhost)
+Access application by [http://localhost](http://localhost)
 
 ### Extra
 
@@ -57,8 +60,8 @@ Run it, to visualize the map with several residences
 
 - [ ] Tests to React
 - [ ] Tests to Spring Java
-- [ ] Fix form layout
-- [ ] Fix home layout
+- [x] Fix form layout
+- [x] Fix home layout
 - [ ] Sonarqube integration to see (coverage, bugs and vulnerabilities)
 - [ ] Move nginx to docker
 - [ ] Github actions to React

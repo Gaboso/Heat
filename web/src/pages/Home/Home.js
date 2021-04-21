@@ -5,6 +5,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 import Form from '../../components/Form';
 import MapView from '../../components/MapView';
+import ButtonContainer from '../../components/ButtonContainer';
 
 const Home = () => {
   const [formOpen, setFormOpen] = useState(false);
@@ -23,9 +24,11 @@ const Home = () => {
 
       <MapView/>
 
-      <Fab color="primary" aria-label="add" onClick={openForm}>
-        <AddIcon/>
-      </Fab>
+      <ButtonContainer>
+        <Fab color="primary" aria-label="add" onClick={openForm}>
+          <AddIcon/>
+        </Fab>
+      </ButtonContainer>
     </div>
   );
 }
