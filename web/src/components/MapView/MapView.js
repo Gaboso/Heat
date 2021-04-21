@@ -36,7 +36,7 @@ const MapView = () => {
 
   return (
     <div>
-      {showMap && <div style={{height: '85vh', width: '100%'}}>
+      {showMap && <div style={{height: '80vh', width: '100%'}}>
         <GoogleMapReact
           bootstrapURLKeys={{key: process.env.REACT_APP_MAPS_API_KEY, libraries: ['visualization']}}
           defaultCenter={{lat: 52.1326, lng: 5.2913}}

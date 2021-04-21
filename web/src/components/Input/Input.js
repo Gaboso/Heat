@@ -1,21 +1,21 @@
-import {TextField} from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 const Input = ({value, error, setError, setValue, ...props}) => {
 
   const isValid = () => {
     if (value === '' || value === undefined) {
       setError(true);
-      return false;
     }
 
     setError(false);
-    return true;
   }
 
   return (
     <TextField value={value}
                error={error}
-               onBlur={() => isValid()}
+               onBlur={isValid}
+               autoComplete="off"
+               variant="outlined"
                {...props}
                helperText={error ? 'Required field' : undefined}
                onChange={(e) => {

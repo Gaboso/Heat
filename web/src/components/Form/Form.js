@@ -1,9 +1,16 @@
 import {useCallback, useState} from 'react';
-import {Button, Drawer, makeStyles, Typography} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Drawer from '@material-ui/core/Drawer';
+
+import residenceService from '../../services/residenceService';
 
 import {showToast} from '../StyledToast';
-import residenceService from '../../services/residenceService';
+import ButtonContainer from '../ButtonContainer';
 import Input from '../Input';
+import GridItem from '../GridItem';
 
 const useStyles = makeStyles(() => ({
   paperRoot: {
@@ -101,26 +108,27 @@ const Form = ({open, handleClose}) => {
         classes: {root: classes.paperRoot}
       }}
     >
-      <form
-        onSubmit={save}
-        style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-      }}>
-        <Typography variant="body1"
-                    component="header">
+      <form onSubmit={save} style={{margin: 16}}>
+        <Typography variant="body1" component="header">
           Add a residence
         </Typography>
 
-        {
-          inputs.map(({id, ...props}) =>
-            <Input id={id} key={id}{...props}/>
-          )
-        }
+        <Grid container
+              direction="column"
+              spacing={1}
+              justify="space-between">
+          {
+            inputs.map(({id, ...props}) =>
+              <GridItem key={id}>
+                <Input id={id} key={id} {...props}/>
+              </GridItem>
+            )
+          }
+        </Grid>
 
-        <Button variant="contained" type='submit'>Save</Button>
+        <ButtonContainer>
+          <Button color="primary" variant="contained" type="submit">Save</Button>
+        </ButtonContainer>
       </form>
     </Drawer>
 
